@@ -5,39 +5,49 @@ import { motion } from "framer-motion";
 export default function Experience() {
   const experience = [
     {
-      role: "Gerente de Sistemas",
-      company: "Voluntades Huancayo",
-      period: "2023 — Actualidad",
+      role: "Encargado de Logística e Informática",
+      company: "Kanazawa S.A.C.",
+      period: "Sep 2025 — Actualidad",
       description:
-        "Lidero el área de tecnología desarrollando soluciones digitales para la organización. Creación de la web institucional en WordPress y desarrollo del sistema de asistencia con Flutter, Firebase y panel administrativo basado en Next.js.",
+        "Control de inventario, recepción y despacho de mercadería hacia todas las zonas de distribución. Desarrollo de sistema de inventario personalizado con Supabase y Node.js. Análisis de costos de importación CIF Callao: prorrateo de flete, cálculo de DUA y conversión USD para distribución Lima y Huancayo.",
     },
     {
-      role: "Freelancer Web",
-      company: "Proyectos Independientes",
-      period: "2021 — Actualidad",
+      role: "Gerente de Sistemas e Informática",
+      company: "Voluntades Huancayo",
+      period: "Ago 2025 — Actualidad",
+      badge: "Voluntario",
       description:
-        "Desarrollo de páginas web, sistemas personalizados y tiendas online. Branding, optimización SEO y consultoría tecnológica.",
+        "Desarrollo del sistema web de asistencia para más de 500 voluntarios con panel administrativo en Next.js y backend en NestJS con autenticación JWT y control de roles. App móvil con Expo/React Native para registro por QR y DNI. Deploy en Vercel, Render y SiteGround.",
+    },
+    {
+      role: "Desarrollador Web",
+      company: "SkyWeb — Proyecto propio",
+      period: "2024 — Actualidad",
+      description:
+        "Agencia web propia especializada en WordPress para PYMEs y negocios locales. Desarrollo de tiendas online con WooCommerce, sitios corporativos e institucionales con Elementor, optimización SEO y configuración de hosting, dominio y SSL.",
     },
     {
       role: "Desarrollador Web & Soporte TI",
       company: "CEBA Javier Prado Ugarteche",
-      period: "2023 — 2024",
+      period: "Oct 2023 — Oct 2024",
       description:
-        "Desarrollo del sistema de matrículas (Laravel + MySQL), mantenimiento de la web institucional y administración de Microsoft 365. Soporte TI a equipos y redes.",
+        "Desarrollo del sistema de matrículas, pagos y notas con Laravel y MySQL, digitalizando la gestión institucional. Mantenimiento de la web institucional, administración de Microsoft 365 y soporte TI a equipos y redes.",
     },
     {
-      role: "Desarrollo Web",
+      role: "Desarrollador Web",
       company: "La Base Coworking",
-      period: "2023",
+      period: "Jul 2023 — Dic 2023",
+      badge: "Prácticas",
       description:
-        "Desarrollo de páginas corporativas, diseño UI/UX y optimización visual. Implementación de sitios modernos y responsivos para clientes.",
+        "Desarrollo de páginas corporativas y sitio web para cliente del sector legal. Prototipo de startup de servicios jurídicos. Diseño UI/UX y optimización visual.",
     },
     {
-      role: "Tecnologias de la Información",
+      role: "Soporte TI",
       company: "UGEL Huancayo",
-      period: "2022",
+      period: "Jul 2022 — Dic 2022",
+      badge: "Prácticas",
       description:
-        "Soporte técnico, mantenimiento de equipos y automatizaciones internas. Gestión de inventarios y soporte a diversas áreas.",
+        "Soporte técnico y mantenimiento de computadoras e impresoras del edificio institucional. Desarrollo de sistema de inventario en Excel y seguimiento de asistencia del personal.",
     },
   ];
 
@@ -63,7 +73,14 @@ export default function Experience() {
           >
             <span className="absolute -left-4 top-6 w-4 h-4 bg-blue-600 rounded-full border-4 border-white shadow"></span>
 
-            <h3 className="text-2xl font-bold">{item.role}</h3>
+            <div className="flex items-center gap-3 flex-wrap">
+              <h3 className="text-2xl font-bold">{item.role}</h3>
+              {item.badge && (
+                <span className="text-xs px-2 py-1 rounded-full bg-blue-500/20 text-blue-300 border border-blue-500/30">
+                  {item.badge}
+                </span>
+              )}
+            </div>
             <p className="text-blue-400 font-medium">{item.company}</p>
             <p className="text-gray-400 text-sm">{item.period}</p>
             <p className="text-gray-300 mt-3">{item.description}</p>

@@ -33,12 +33,11 @@ export default function Contact() {
             const formData = new FormData(form);
 
             const data = {
-                name: formData.get("name"),
-                email: formData.get("email"),
-                subject: formData.get("subject"),
-                message: formData.get("message"),
+              name: formData.get("name"),
+              email: formData.get("email"),
+              subject: formData.get("subject"),
+              message: formData.get("message"),
             };
-
 
             const res = await fetch("/api/contact", {
               method: "POST",
@@ -122,17 +121,54 @@ export default function Contact() {
         <h3 className="text-2xl font-semibold mb-4">Información de Contacto</h3>
 
         <div className="space-y-4 text-gray-300">
+          {/* Email */}
           <p>
-            📧 <strong>Email:</strong> rickrhdev@gmail.com
+            📧 <strong>Email:</strong>{" "}
+            <a
+              href="mailto:rrick8757@gmail.com"
+              className="hover:text-purple-400 transition-colors underline underline-offset-2"
+            >
+              rrick8757@gmail.com
+            </a>
           </p>
+
+          {/* LinkedIn */}
           <p>
-            💼 <strong>LinkedIn:</strong> /rickdev
+            💼 <strong>LinkedIn:</strong>{" "}
+            <a
+              href="https://www.linkedin.com/in/ricardo-romero-huaman-648956287/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-purple-400 transition-colors underline underline-offset-2"
+            >
+              /Ricardo R.H.
+            </a>
           </p>
+
+          {/* GitHub */}
           <p>
-            🧑‍💻 <strong>GitHub:</strong> /rick-rh
+            🧑‍💻 <strong>GitHub:</strong>{" "}
+            <a
+              href="https://github.com/Rick1998ricK"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-purple-400 transition-colors underline underline-offset-2"
+            >
+              /rick-rh
+            </a>
           </p>
+
+          {/* Ubicación */}
           <p>
-            📍 <strong>Ubicación:</strong> Huancayo, Perú
+            📍 <strong>Ubicación:</strong>{" "}
+            <a
+              href="https://maps.google.com/?q=Huancayo,Peru"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-purple-400 transition-colors underline underline-offset-2"
+            >
+              Huancayo, Perú
+            </a>
           </p>
         </div>
       </motion.div>

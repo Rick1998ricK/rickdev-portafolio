@@ -1,9 +1,16 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { title } from "process";
 
 export default function Education() {
   const education = [
+    {
+      title:"Ingeniería de Sistemas e Informática - Universidad Continental",
+      period: "2025 - actualidad",
+      description:
+        "Estudios universitarios en curso mediante convalidación de la carrera técnica de Ingeniería de Software. Enfoque en sistemas de información. desarrollo de software, arquitectura de soluciones y tecnolodías modernas.",
+    },
     {
       title: "Ingeniería de Software – SENATI",
       period: "2021 – 2024",
