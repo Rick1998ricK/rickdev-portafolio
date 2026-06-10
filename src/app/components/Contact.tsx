@@ -61,16 +61,10 @@ export default function Contact() {
             e.preventDefault();
             const form = e.target as HTMLFormElement;
             const formData = new FormData(form);
-            const data = {
-              name: formData.get("name"),
-              email: formData.get("email"),
-              subject: formData.get("subject"),
-              message: formData.get("message"),
-            };
-            const res = await fetch("/api/contact", {
+            const res = await fetch("https://formspree.io/f/mojzleoz", {
               method: "POST",
-              headers: { "Content-Type": "application/json" },
-              body: JSON.stringify(data),
+              body: formData,
+              headers: { Accept: "application/json" },
             });
             if (res.ok) {
               alert("Mensaje enviado correctamente.");
@@ -176,7 +170,7 @@ export default function Contact() {
           ))}
         </div>
 
-        {/* Disponibilidad
+        {/* Disponibilidad 
         <div className="p-4 rounded-xl bg-green-500/5 border border-green-500/20">
           <div className="flex items-center gap-2 mb-1">
             <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
