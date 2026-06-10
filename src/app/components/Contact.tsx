@@ -77,6 +77,7 @@ export default function Contact() {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
         >
+          <input type="hidden" name="_subject" value="Nuevo mensaje desde rickdev.net.pe" />
           <div>
             <label className="text-gray-400 text-sm block mb-1.5">Nombre</label>
             <input
